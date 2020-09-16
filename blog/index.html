@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Kufam:ital@1&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100;1,200&display=swap" rel="stylesheet">
+        <script>
+            function change(url){
+                document.getElementById("ifrmae").src=url;
+            }
+        </script>
+        <style>
+            body{
+                width:100%;
+                height:100%;
+            }
+            .header{
+                font-family: 'Kufam', cursive;
+                text-align: center;
+                font-size: 120px;
+                color: cadetblue;
+                padding-top: 60px;
+                margin-bottom: 20;
+            }
+            h1:hover{
+                animation-duration: 2s;
+                animation-name: pulse;
+            }
+            a{
+                text-decoration: none;
+                color:darkslateblue;
+            }
+            .header2{
+                display:flex;
+            }
+            .header2:hover{
+                animation-duration: 1s;
+                animation-name: pulse;
+                display:flex;
+            }
+            .header1{
+                font-family: 'Montserrat', sans-serif;
+                flex:1;
+                font-size: larger;
+                text-align: center;
+            }
+            .header1:hover{
+                font-weight: bold;
+            }
+            .edit{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <h1 class="header"><a href="index.html">{{ msg }}</a></h1>
+            <div class="header2">
+                <span v-on:click="changeTitle(1), change('class1.html')" class="header1">CLASS 1</span>
+                <span v-on:click="changeTitle(2), change('class2.html')" class="header1">CLASS 2</span>
+                <span v-on:click="changeTitle(3), change('class3.html')" class="header1">CLASS 3</span>
+                <span v-on:click="changeTitle(4), change('class4.html')" class="header1">CLASS 4</span>
+            </div>
+            <br>
+            <div class="header2">
+                <span v-on:click="changeTitle(5), change('class5.html')" class="header1">CLASS 5</span>
+                <span v-on:click="changeTitle(6), change('class6.html')" class="header1">CLASS 6</span>
+                <span v-on:click="changeTitle(7), change('class7.html')" class="header1">CLASS 7</span>
+                <span v-on:click="changeTitle(8), change('class8.html')" class="header1">CLASS 8</span>
+            </div>
+            <br>
+            <div class="BODY">
+                <iframe width="100%" height="50%" middle src="" id="iframe" frameborder="0"></iframe>
+            </div>
+            <br>
+            <div class="footer">
+                <div class="header2">
+                    <span class="header1"><a href="info.html">INFORMATION</a></span>
+                    <span class="header1"><a href="mailto:20sunrirnt069@sunrint.hs.kr?Subject=HELLO">CONTACT : brian5803@naver.com</a></span>
+                </div>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
